@@ -1,0 +1,34 @@
+create table employees (
+ID TEXT PRIMARY KEY,
+NAME TEXT NOT NULL,
+EMAIL_ID VARCHAR,
+PHONE TEXT,
+DEPARTMENT TEXT DEFAULT 'IT'
+);
+--insert into 
+-- Insert into employees full values
+INSERT INTO employees (ID, NAME, EMAIL_ID, PHONE, DEPARTMENT)
+VALUES ('2', 'UZMA', 'uzmabagwan@gmail.com', '0006431290', 'CS'),
+('3', 'farzana', 'farzanabagwan@gmail.com', '3336431290', 'BIO');
+
+
+--insert with NULL
+
+INSERT INTO employees (ID, NAME, EMAIL_ID, PHONE, DEPARTMENT)
+VALUES ('4', 'tabbassum', 'tbsmn@gmail.com', NULL, 'BIO');
+
+
+-- Insert with DEFAULT department (IT)
+INSERT INTO employees (ID, NAME, EMAIL_ID, PHONE)
+VALUES ('5', 'sakina', 'sakina@gmail.com', '9087543208');
+
+-- Update email of employee with ID 1
+UPDATE employees
+SET EMAIL_ID = 'update@gmail.com'
+WHERE ID = '1';
+
+-- Delete student with ID 2
+DELETE FROM employees
+WHERE id = 2;
+
+SELECT * FROM employees;
